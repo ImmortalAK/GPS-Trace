@@ -1,6 +1,6 @@
 <?php
-header("Location: https://gpstraceaz.com/MapsAndData.php", true, 301);
-exit();
+/*header("Location: https://gpstraceaz.com/MapsAndData.php", true, 301);
+exit();*/
 ?>
 <?php
 	$host_name = 'db5000295091.hosting-data.io';
@@ -16,12 +16,14 @@ exit();
 
 	$fName=$_GET['fname'];
 	$lName=$_GET['lname'];
+	$uName=$_GET['uname'];
+	$pass=$_GET['pass'];
 	$latitude=$_GET['latitude'];
 	$longitude=$_GET['longitude'];
 	$cT=$_GET['insertF'];
 
 
-	$query = "INSERT INTO Location VALUES (NULL, '$fName', '$lName', $latitude, $longitude, '$cT', NULL)";
+	$query = "INSERT INTO Location VALUES (NULL, '$fName', '$lName', '$uName', '$pass', $latitude, $longitude, '$cT', NULL)";
 	echo $query;
 	if (!mysqli_query($dbconnect, $query)) {
 		if (mysqli_connect_errno()) {
@@ -33,6 +35,7 @@ exit();
     }
 		else {
       echo "Insert Successful";
+			 echo '<script>window.location.href = "https://gpstraceaz.com/MapsAndData.php";</script>';
 }
 
 ?>

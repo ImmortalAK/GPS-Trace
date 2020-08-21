@@ -1,8 +1,17 @@
 head {
-  margin-left: 15%;
-  margin-right: 15%;
+}
+h1 {
+  background-color: #66ff66;
+  text-align: center;
+  border: 3px solid green;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 body {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 8%;
+  margin-right: 8%;
+  background-color: antiquewhite;
+}
+#mapid {
+  border: 3px solid green;
 }

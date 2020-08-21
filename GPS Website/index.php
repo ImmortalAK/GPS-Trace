@@ -3,10 +3,7 @@
 <head>
 	<link rel="stylesheet" href="/css/Default.css">
 	<title>GPS Trace</title>
-	<div class="jumbotron jumbotron-fluid">
-  	<div class="container">
-			<h1>Maps and Data</h1>
-		</div>
+			<h1>Plot a Point</h1>
 	</div>
 </head>
 <body>
@@ -17,13 +14,15 @@
 	}
 </script>
 <div class="container-fluid">
-  <h1>GPS Point Tracking</h1>
+  <h2>GPS Point Tracking</h2>
   <p>By entering a name below you will log a point with a best guess at your current location. The goal of this is to take a look into gps data and what we can extract from it.</p>
   <div class="container-fluid">
 <div class="col-8">
 <form id="myForm" action="/action_page.php">
   First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br><br>
+  Last name: <input type="text" name="lname"><br>
+	Username: <input type="text" name="uname" required><br>
+  Password: <input type="text" name="pass" required><br><br>
   <input type="hidden" id="latitude" name="latitude" value="">
   <input type="hidden" id="longitude" name="longitude" value="">
 	<input type="hidden" id="insertF" name="insertF" value='Website'>
